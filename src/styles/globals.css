@@ -1,0 +1,71 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,400;0,800;1,400;1,700&display=swap');
+*{
+  margin: 0;
+  padding: 0;
+  font-family: 'Open Sans';
+}
+
+:root{
+  --c-m1: #122173;
+  --c-m2: #394DBF;
+  --c-m3: #2D3773;
+  --c-m4: #F2E49B;
+  --c-m5: #D99C52;
+  --c-mwhite: #FAFAFA;
+  --c-mblack: #0D0D0D;
+}
+
+html {
+  background-color: var(--c-mwhite);
+}
+
+.container-zoom {
+  /* min-width: 1440px; */
+  max-width: 1440px;
+  align-self: center;
+}
+
+
+.fade-in {
+  animation: FadeIn 2s ease;
+}
+
+.fade-in--up{
+  animation: FadeIn 2s ease, Up 1.2s ease;
+}
+
+.fall-object {
+  animation: FadeIn 2s ease, Down 1.2s ease;
+  animation-fill-mode: forwards;
+}
+
+.hidden {
+  opacity: 0;
+}
+
+@keyframes FadeIn {
+  from {
+      opacity: 0;
+  }
+  to {
+      opacity: 1;
+  }
+}
+
+@keyframes Up {
+  from {
+    transform: translateY(200px);
+  }
+  to {
+    transform: translateY(0px);
+  }
+}
+
+@keyframes Down {
+  from {
+    transform: translateY(-200px);
+  }
+  to {
+    transform: translateY(0px);
+  }
+}

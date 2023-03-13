@@ -1,0 +1,25 @@
+.button--remove-style {
+    background: none;
+	color: inherit;
+	border: none;
+	padding: 0;
+	font: inherit;
+	cursor: pointer;
+	outline: inherit;
+}
+
+.button {
+    background-color: var(--c-m2);
+    padding: 16px 49px;
+    border-radius: 16px;
+    font-size: 1.5rem;
+    color: var(--c-mwhite);
+    font-style: normal;
+    font-weight: 400;
+    line-height: 33px;
+    transition: transform 0.1s cubic-bezier(0, 0, 0.2, 1);
+}
+
+.button:hover {
+    transform: scale(1.03);
+}

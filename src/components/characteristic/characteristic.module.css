@@ -1,0 +1,21 @@
+.container {
+    /* min-height: ; */
+    padding: 40px 0px;
+    display: flex;
+    justify-content: center;
+}
+
+.wrapper-card {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(360px, 1fr));
+    gap: 48px;
+    max-width: fit-content;
+    padding: 40px 132px;
+}
+
+
+@media (max-width: 720px) { 
+    .wrapper-card {
+        padding: 40px 0px;
+    }
+}

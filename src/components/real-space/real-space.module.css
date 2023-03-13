@@ -1,0 +1,123 @@
+.container {
+    padding: 80px 0px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.container__title {
+    color: var(--c-m3);
+    font-size: 2.25rem;
+    font-weight: 700;
+    text-align: center;
+        padding: 0px 24px;
+}
+
+.container__grid-image{
+    margin-top: 40px;
+    display: grid;
+    grid-template-rows: repeat(2, 233px);
+    grid-template-columns: repeat(3, 305px);
+    grid-template-areas:
+        'i1l i2s i3s'
+        'i1l i4s i5s';
+    grid-gap: 22px;
+}
+
+.container__grid-image > div > img {
+    width: 100%;
+    height: 100%;
+    min-width: 159px;
+        min-height: 175px;
+    object-fit: fill;
+}
+
+.grid-image>div {
+    position: relative;
+}
+.grid-image__image1 {
+    grid-area: i1l;
+    animation-delay: 0.2s;
+        opacity: 0;
+}
+
+
+.grid-image__image2 {
+    grid-area: i2s;
+    animation-delay: 0.6s;
+        opacity: 0;
+}
+.grid-image__image3 {
+    grid-area: i3s;
+    animation-delay: 0.8s;
+        opacity: 0;
+}
+.grid-image__image4 {
+    grid-area: i4s;
+    animation-delay: 1s;
+        opacity: 0;
+}
+.grid-image__image5 {
+    grid-area: i5s;
+    animation-delay: 1.2s;
+        opacity: 0;
+    }
+    
+    .grid-image__image1>div,
+    .grid-image__image2>div,
+    .grid-image__image3>div,
+    .grid-image__image4>div,
+    .grid-image__image5>div {
+        z-index: 10;
+        /* background: red; */
+        height: -webkit-fill-available;
+        position: absolute;
+        width: -webkit-fill-available;
+        background: var(--c-m3);
+        mix-blend-mode: soft-light;
+}
+
+
+@media (max-width:1280px) {
+    .container__grid-image {
+        grid-template-areas:
+            'i2s i3s'
+            'i4s i5s';
+        grid-template-columns: repeat(2, 305px);
+        animation: FadeIn 2s ease;
+    }
+
+    .grid-image__image1 {
+        display: none;
+    }
+
+    .container__grid-image,
+    .container__grid-image>div>div,
+    .container__grid-image>div>img {
+        border-radius: 16px;
+    }
+
+}
+
+@media (max-width: 720px) {
+
+    .container__grid-image {
+        grid-template-areas:
+            'i2s'
+            'i3s'
+            'i4s'
+            'i5s';
+        grid-template-columns: repeat(1, 305px);
+        animation: FadeIn 2s ease;
+    }
+}
+
+@keyframes FadeIn {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
